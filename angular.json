@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cookies": {
+    "cookies-dev": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cookies",
+            "outputPath": "dist/cookies-dev",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -45,7 +45,7 @@
                   "maximumError": "1MB"
                 }
               ],
-              "outputHashing": "all", "baseHref":"/cookies/"
+              "outputHashing": "all", "baseHref":"/cookies-dev/"
             },
             "development": {
               "optimization": false,
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cookies:build:production"
+              "buildTarget": "cookies-dev:build:production"
             },
             "development": {
-              "buildTarget": "cookies:build:development"
+              "buildTarget": "cookies-dev:build:development"
             }
           },
           "defaultConfiguration": "development"
